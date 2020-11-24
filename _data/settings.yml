@@ -19,16 +19,8 @@ author:
 
 #-------------------------------
 # Contact links
-platforms:
--
-    type: github
-    icon: "fab fa-github-alt"
-    link: "https://github.com/likemian/likemian.github.io"
--
-    type: mail
-    icon: "fas fa-envelop"
-    link: "18624269120@163.com"
-
+mail: "18624269120@163.com"
+github: "https://github.com/likemian/"
 
 #-------------------------------
 # Comment Section (Disqus)
