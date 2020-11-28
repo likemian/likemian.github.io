@@ -31,17 +31,17 @@ tags:   PHP
 
 ### 问题原因：
 ---
-  mysql在5.7以前的默认身份验证插件为`mysql_native_password`，但是升级到8.0.11更改为`caching_sha2_password` > [nysql更新文档](https://dev.mysql.com/doc/refman/8.0/en/caching-sha2-pluggable-authentication.html)
+mysql在5.7以前的默认身份验证插件为`mysql_native_password`，但是升级到8.0.11更改为`caching_sha2_password` 
+> [mysql更新文档](https://dev.mysql.com/doc/refman/8.0/en/caching-sha2-pluggable-authentication.html)
 ---
 
 ### 解决方案：
 ---
 #### 网上的说法：
 
-  1. 修改mysql的密码认证（亲测可行）
+1. 修改mysql的密码认证（亲测可行）
   ```
   ALTER USER 'YOURUSERNAME'@'localhost' IDENTIFIED WITH mysql_native_password BY 'YOURPASSWORD';
   ```
-
-  1. 修改laravel里的`config/database.php`里面mysql连接的`strict => false`（尝试了一下，不好用，原因未知）
+2. 修改laravel里的`config/database.php`里面mysql连接的`strict => false`（尝试了一下，不好用，原因未知）
 ---
