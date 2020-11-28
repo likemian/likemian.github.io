@@ -31,8 +31,8 @@ tags:   PHP
 
 ### 问题原因：
 
-  mysql在5.7以前的默认身份验证插件为`mysql_native_password`，但是升级到8.0.11更改为`caching_sha2_password`  
-  > [mysql更新文档](https://dev.mysql.com/doc/refman/8.0/en/caching-sha2-pluggable-authentication.html)
+mysql在5.7以前的默认身份验证插件为`mysql_native_password`，但是升级到8.0.11更改为`caching_sha2_password`
+> <a href="https://dev.mysql.com/doc/refman/8.0/en/caching-sha2-pluggable-authentication.html" target="_blank" style="font-size:20px;color:red">mysql更新文档</a>
 
 --------
 
