@@ -6,8 +6,6 @@ image:  11.jpg
 tags:   PHP
 ---
 
-# MYSQL版本8以上，客户端及PHP连接问题
-
 ### 问题描述：
 
   在使用laravel框架时，本地环境mysql版本为8.0.17,
