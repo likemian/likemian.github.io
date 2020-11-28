@@ -40,10 +40,10 @@ tags:   PHP
 
 #### 网上的说法：
 
-* 1.  修改mysql的密码认证（亲测可行）
+1.  修改mysql的密码认证（亲测可行）
     ```
     ALTER USER 'YOURUSERNAME'@'localhost' IDENTIFIED WITH mysql_native_password BY 'YOURPASSWORD';
     ```
-* 2.  修改laravel里的`config/database.php`里面mysql连接的`strict => false`（尝试了一下，不好用，原因未知）
+1.  修改laravel里的`config/database.php`里面mysql连接的`strict => false`（尝试了一下，不好用，原因未知）
 
 --------
