@@ -9,7 +9,7 @@ tags:   PHP
 # MYSQL版本8以上，客户端及PHP连接问题
 
 ### 问题描述：
----
+
   在使用laravel框架时，本地环境mysql版本为8.0.17,
   ```
    mysql> select version();
@@ -27,22 +27,23 @@ tags:   PHP
    ```
    PDOException::("PDO::__construct(): The server requested authentication method unknown to the client [caching_sha2_password]")
    ```
----
+--------
 
 ### 问题原因：
---------
+
   mysql在5.7以前的默认身份验证插件为`mysql_native_password`，但是升级到8.0.11更改为`caching_sha2_password`  
   > [mysql更新文档](https://dev.mysql.com/doc/refman/8.0/en/caching-sha2-pluggable-authentication.html)
-  
+
 --------
 
 ### 解决方案：
---------
+
 #### 网上的说法：
 
-* 1. 修改mysql的密码认证（亲测可行）
+* 1.  修改mysql的密码认证（亲测可行）
     ```
     ALTER USER 'YOURUSERNAME'@'localhost' IDENTIFIED WITH mysql_native_password BY 'YOURPASSWORD';
     ```
-* 2. 修改laravel里的`config/database.php`里面mysql连接的`strict => false`（尝试了一下，不好用，原因未知）
+* 2.  修改laravel里的`config/database.php`里面mysql连接的`strict => false`（尝试了一下，不好用，原因未知）
+
 --------
